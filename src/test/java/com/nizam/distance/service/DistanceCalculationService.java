@@ -10,6 +10,7 @@ public class DistanceCalculationService {
         return convertToUnit(totalDistance, resultUnit);
     }
 
+    // [sorry, re-commit] the following existing 2 methods implementing the calculation logic.
     private double convertToMeters(double distance, String unit) {
         if (unit.equalsIgnoreCase("yards")) {
             // 1 yard = 0.9144 meters
