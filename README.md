@@ -26,7 +26,7 @@ Creating Request and Response Models:
 
 Implementing the Calculation Logic:
 - Write the logic in the controller to calculate the total distance based on the provided distances and units. 
-- Include conversion logic(ie. converting yards to meters).
+- Include conversion logic (ie. converting yards to meters).
 
 Manual Testing the Service:
 - Use Postman to send test requests to the service. 
