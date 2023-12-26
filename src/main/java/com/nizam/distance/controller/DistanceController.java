@@ -4,18 +4,18 @@ import com.nizam.distance.exception.*;
 import com.nizam.distance.request.DistanceRequest;
 import com.nizam.distance.response.DistanceResponse;
 import com.nizam.distance.service.DistanceCalculationService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.MissingServletRequestParameterException;
+import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+//import javax.validation.Valid;
 
-@Validated
+@ControllerAdvice
 @RestController
 public class DistanceController {
 
@@ -30,7 +30,6 @@ public class DistanceController {
     //    @Secured("ROLE_USER")
     @PostMapping("/calculateDistance")
     public ResponseEntity<?> calculateDistance(@Valid @RequestBody DistanceRequest request, BindingResult bindingResult) {
-
 
         if (bindingResult.hasErrors()) {
             throw new InvalidRequestException("Invalid request: " + bindingResult.getAllErrors());
