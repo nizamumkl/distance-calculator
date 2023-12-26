@@ -10,11 +10,11 @@ public class DistanceCalculationService {
         double totalDistance = convertToMeters(firstDistance, firstUnit)
                 + convertToMeters(secondDistance, secondUnit);
 
-        return convertToUnit(totalDistance, resultUnit);
+        return convertToUnit(totalDistance, "meters", resultUnit);
     }
 
     // [sorry, re-commit] the following existing 2 methods implementing the calculation logic.
-    private double convertToMeters(double distance, String unit) {
+    public double convertToMeters(double distance, String unit) {
         if (unit.equalsIgnoreCase("yards")) {
             // 1 yard = 0.9144 meters
             return distance * 0.9144;
@@ -23,8 +23,8 @@ public class DistanceCalculationService {
         return distance;
     }
 
-    private double convertToUnit(double distance, String unit) {
-        if (unit.equalsIgnoreCase("yards")) {
+    public double convertToUnit(double distance, String fromUnit, String toUnit) {
+        if (toUnit.equalsIgnoreCase("yards")) {
             // 1 meter = 1.09361 yards
             return distance * 1.09361;
         }

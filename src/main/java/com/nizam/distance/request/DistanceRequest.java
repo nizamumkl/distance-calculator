@@ -1,10 +1,25 @@
 package com.nizam.distance.request;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 public class DistanceRequest {
-    private double firstDistance;
+    @NotNull(message = "First distance cannot be null")
+    @Min(value = 0, message = "First distance should be a positive number")
+    private Double firstDistance;
+
+    @NotBlank(message = "First unit cannot be blank")
     private String firstUnit;
-    private double secondDistance;
+
+    @NotNull(message = "Second distance cannot be null")
+    @Min(value = 0, message = "Second distance should be a positive number")
+    private Double secondDistance;
+
+    @NotBlank(message = "Second unit cannot be blank")
     private String secondUnit;
+
+    @NotBlank(message = "Result unit cannot be blank")
     private String resultUnit;
 
     // Getters and setters
