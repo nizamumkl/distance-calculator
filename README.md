@@ -47,4 +47,31 @@ Documentation and Code Cleanup:
 Deployment and Further Enhancements:
 - Deploy the service to a server or platform. 
 - Additionally, consider any further improvements or additional features that might enhance the functionality of the web service.
+
+
+# Postman Test Information
+
+Kindly test it as follows:
+
+URL: [POST] http://localhost:8080/calculateDistance
+  
+Authorization
+- Type: Basic Auth
+- Username: myusername
+- Password: mypassword
+
+Body
+- JSON: 
+{   "firstDistance": 3,
+    "firstUnit": "yards",
+    "secondDistance": 5,
+    "secondUnit": "meters",
+    "resultUnit": "meters"
+}
+
+# To improve in the future.
+
+
+
+
   
