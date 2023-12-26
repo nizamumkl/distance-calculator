@@ -72,6 +72,8 @@ Body
 # To improve in the future.
 
 - To support inputs in the variant of the measurement units such as kilometer, mile, etc.
+- To allow flexibility to use a 3rd-party API to do any unit conversion which are not yet supported in my distance-calculator application.
+- To document the API using Swagger (https://swagger.io/).
 
 
   
