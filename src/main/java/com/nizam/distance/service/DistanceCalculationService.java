@@ -1,5 +1,8 @@
 package com.nizam.distance.service;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class DistanceCalculationService {
     public double calculateTotalDistance(double firstDistance, String firstUnit,
                                          double secondDistance, String secondUnit,
